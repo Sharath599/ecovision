@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Ecovision : Deep Learning Model for Seasonal Detection</title>
+  <meta name="description" content="Deep learning approach for analyzing plant images and environmental parameters to detect seasonal changes">
+  <meta name="keywords" content="seasonal detection, plant images, environmental parameters, deep learning, ecovision, agricultural AI">
+
+  <!-- Favicons -->
+  <link href="../static/assets/img/favicon.png" rel="icon">
+  <link href="../static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../static/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../static/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../static/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="../static/assets/css/main.css" rel="stylesheet">
+
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="/home" class="logo d-flex align-items-center me-auto">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">Ecovision</h1>
+        <span>.</span>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="/home" class="active">Home<br></a></li>
+          <li><a href="/home1">Prediction</a></li>
+          <li><a href="/graphs">Data Visualization</a></li>
+          <li class="dropdown"><a href="#"><span>Notebooks</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="../static/Classification.html">Classification</a></li>
+              <li><a href="../static/Data Preparation.html">Data Preparation</a></li>
+            </ul>
+          </li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="/">Log Out</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+
+      <img src="../static/assets/img/hero-bg.jpg" alt="" data-aos="fade-in">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h2 data-aos="fade-up" data-aos-delay="100">Ecovision : Deep Learning Model for Seasonal Detection</h2>
+            <p data-aos="fade-up" data-aos-delay="200">Advanced AI System for Seasonal Change Detection in Plants</p>
+            <div class="d-flex mt-4" data-aos="fade-up" data-aos-delay="300">
+              <a href="/home1" class="btn-get-started">Try Now</a>
+              <a href="/graphs" class="btn-watch-video d-flex align-items-center"><i class="bi bi-graph-up"></i><span>Explore Graphs</span></a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+
+    <!-- Tabs Section -->
+    <section id="tabs" class="tabs section">
+
+      <div class="container">
+
+        <ul class="nav nav-tabs row  d-flex" data-aos="fade-up" data-aos-delay="100">
+          <li class="nav-item col-3">
+            <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tabs-tab-1">
+              <i class="bi bi-cloud-upload"></i>
+              <h4 class="d-none d-lg-block">Image Upload</h4>
+            </a>
+          </li>
+          <li class="nav-item col-3">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tabs-tab-2">
+              <i class="bi bi-cpu"></i>
+              <h4 class="d-none d-lg-block">Deep Learning Processing</h4>
+            </a>
+          </li>
+          <li class="nav-item col-3">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tabs-tab-3">
+              <i class="bi bi-cloud-sun"></i>
+              <h4 class="d-none d-lg-block">Environmental Analysis</h4>
+            </a>
+          </li>
+          <li class="nav-item col-3">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tabs-tab-4">
+              <i class="bi bi-graph-up"></i>
+              <h4 class="d-none d-lg-block">Seasonal Detection Results</h4>
+            </a>
+          </li>
+        </ul><!-- End Tab Nav -->
+
+        <div class="tab-content" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="tab-pane fade active show" id="tabs-tab-1">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                <h3>Plant Image Upload and Processing</h3>
+                <p class="fst-italic">
+                  Upload your plant images along with environmental parameters to begin the automated analysis process. Our trained deep learning model will process and analyze the images to detect seasonal changes.
+                </p>
+                <ul>
+                  <li><i class="bi bi-check2-all"></i>
+                    <span>Simple and intuitive image upload interface for plant photographs</span>
+                  </li>
+                  <li><i class="bi bi-check2-all"></i> <span>Automated image preprocessing and quality validation before analysis</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Support for standard plant image formats with comprehensive validation checks</span></li>
+                </ul>
+                <p>
+                  Once uploaded, the plant images are processed through our trained deep learning model. The system employs advanced image processing techniques and neural network architectures to extract meaningful features from plant characteristics. These features are then analyzed along with environmental parameters to detect seasonal patterns and changes, providing accurate seasonal detection and classification capabilities.
+                </p>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="../static/assets/img/working-1.jpg" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div><!-- End Tab Content Item -->
+
+          <div class="tab-pane fade" id="tabs-tab-2">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                <h3>Feature Extraction and Deep Learning Analysis</h3>
+                <p>
+                  Our trained deep learning model processes uploaded plant images using advanced image processing techniques and neural network architectures. The system extracts meaningful features from plant characteristics through multiple processing stages.
+                </p>
+                <p class="fst-italic">
+                  The model employs sophisticated convolutional neural networks to identify subtle patterns, plant structures, and seasonal indicators that correlate with environmental changes.
+                </p>
+                <ul>
+                  <li><i class="bi bi-check2-all"></i> <span>Image processing algorithms preprocess and enhance plant images for optimal feature extraction</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Deep learning models extract hierarchical features including leaf patterns, color changes, growth stages, and plant morphology</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Trained neural networks analyze extracted features to identify seasonal indicators</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Automated feature analysis focuses on patterns that correlate with seasonal transitions</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="../static/assets/img/working-2.jpg" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div><!-- End Tab Content Item -->
+
+          <div class="tab-pane fade" id="tabs-tab-3">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                <h3>Comprehensive Environmental and Seasonal Analysis</h3>
+                <p>
+                  The system analyzes multiple plant features including leaf color, growth patterns, flowering stages, and environmental parameters to generate comprehensive seasonal assessments. These indicators provide valuable insights into seasonal transitions and plant health status.
+                </p>
+                <ul>
+                  <li><i class="bi bi-check2-all"></i> <span>Assessment of plant morphology and growth patterns</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Detection of seasonal changes and transitions</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Evaluation of environmental parameters including temperature, humidity, and weather patterns</span></li>
+                </ul>
+                <p class="fst-italic">
+                  Accurate identification of seasonal patterns enables proactive agricultural management and environmental monitoring strategies.
+                </p>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="../static/assets/img/working-3.jpg" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div><!-- End Tab Content Item -->
+
+          <div class="tab-pane fade" id="tabs-tab-4">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                <h3>Detailed Analysis Reports and Visualizations</h3>
+                <p>
+                  The system generates comprehensive reports that highlight key findings from plant image and environmental analysis. These reports include visual annotations, seasonal classification, and detailed feature analysis to support agricultural and environmental decision-making.
+                </p>
+                <p class="fst-italic">
+                  Clear visualizations and interpretable results help researchers and agricultural professionals understand the analysis findings and make informed decisions.
+                </p>
+                <ul>
+                  <li><i class="bi bi-check2-all"></i> <span>Visual annotations highlighting significant plant features and seasonal patterns</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Seasonal classification categories based on detected indicators</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Comprehensive feature analysis with detailed explanations of findings and their environmental significance</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="../static/assets/img/working-4.jpg" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div><!-- End Tab Content Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Tabs Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section section-bg dark-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Analysis Capabilities</h2>
+        <p>Comprehensive plant image and environmental parameter analysis services for seasonal detection</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item d-flex position-relative h-100">
+              <i class="bi bi-image icon flex-shrink-0"></i>
+              <div>
+                <h4 class="title"><a href="#" class="stretched-link">Plant Image Analysis</a></h4>
+                <p class="description">Automated processing and analysis of plant photographs to extract meaningful visual and structural features</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item d-flex position-relative h-100">
+              <i class="bi bi-cloud-sun icon flex-shrink-0"></i>
+              <div>
+                <h4 class="title"><a href="#" class="stretched-link">Environmental Parameter Analysis</a></h4>
+                <p class="description">Assessment of seasonal patterns through analysis of environmental factors including temperature, humidity, and weather data</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item d-flex position-relative h-100">
+              <i class="bi bi-calendar-check icon flex-shrink-0"></i>
+              <div>
+                <h4 class="title"><a href="#" class="stretched-link">Seasonal Pattern Recognition</a></h4>
+                <p class="description">Identification and analysis of plant growth patterns, color changes, and morphological variations indicative of seasonal transitions</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item d-flex position-relative h-100">
+              <i class="bi bi-cpu icon flex-shrink-0"></i>
+              <div>
+                <h4 class="title"><a href="#" class="stretched-link">Deep Learning Processing</a></h4>
+                <p class="description">Advanced neural network architectures trained on extensive plant imaging datasets for accurate feature extraction and seasonal classification</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-item d-flex position-relative h-100">
+              <i class="bi bi-file-earmark-text icon flex-shrink-0"></i>
+              <div>
+                <h4 class="title"><a href="#" class="stretched-link">Analysis Report Generation</a></h4>
+                <p class="description">Comprehensive analysis reports with visual annotations and detailed findings to support agricultural and environmental decision-making processes</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item d-flex position-relative h-100">
+              <i class="bi bi-tree icon flex-shrink-0"></i>
+              <div>
+                <h4 class="title"><a href="#" class="stretched-link">Seasonal Change Detection</a></h4>
+                <p class="description">Advanced detection capabilities for early identification of seasonal transitions and plant phenological changes</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Ecovision</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        Designed by <a href="#">BootstrapMade</a> Distributed by <a href="#">ThemeWagon</a>
+      </div>
+      <div class="credits">
+        Modified by <a href="#">Ecovision Team</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../static/assets/vendor/php-email-form/validate.js"></script>
+  <script src="../static/assets/vendor/aos/aos.js"></script>
+  <script src="../static/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../static/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../static/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="../static/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="../static/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="../static/assets/js/main.js"></script>
+
+</body>
+
+</html>

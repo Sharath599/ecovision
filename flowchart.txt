@@ -1,0 +1,33 @@
+1. Import packages
+2. Collect Dataset
+	- Plant images ( map based on seasons)
+	- Environment features ( if public not available synthatic will genrate
+3. Preprocessing
+	- Data Agumentation for images
+	- Handing missing, remove duplicates for features data
+4. Feature Extraction
+	- CNN / or any DL model to extract image features
+	- MLP / any ML model to use environmental features
+5. Feature Fusion
+	- Combine Image features and environmental features
+6. Split the dataset
+	- Train/Test
+7. Build the models
+	- DL models like CNN, Resnet, Vgg, Xception, Nasnet
+	- Ext models Hybrid combination of individual models
+
+8. Train the models
+9. Evalution
+	- Metrics: Accuracy, Precision, recall, F1-score
+10. save the model
+11. Compare the metrics visually and numerically
+
+Front End:
+---------------
+
+1. Flask Framework with Sqlite for signup and signin
+2. Importing the packages
+3. User gives input as Feature Values and image
+4. The given input is preprocessed for prediction
+5. Trained model is used for prediction
+6. Final outcome is displayed through frontend

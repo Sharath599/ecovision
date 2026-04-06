@@ -1,0 +1,5 @@
+Feature dataset (not used)
+https://www.opendatabay.com/data/ai-ml/c3a8a4c0-6ad8-4fda-89e4-08b6a0862131
+
+image dataset
+https://www.kaggle.com/datasets/mohitsingh1804/plantvillage
