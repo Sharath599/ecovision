@@ -1,0 +1,114 @@
+/**
+* Signup Form Styling
+* Matches Presento template contact form styling
+*/
+
+/* Signup Form Container */
+.contact .signup-form {
+  background-color: var(--surface-color);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  padding: 30px;
+}
+
+@media (max-width: 575px) {
+  .contact .signup-form {
+    padding: 20px;
+  }
+}
+
+/* Form Inputs */
+.contact .signup-form input[type=text],
+.contact .signup-form input[type=email],
+.contact .signup-form input[type=tel],
+.contact .signup-form input[type=password] {
+  font-size: 14px;
+  padding: 10px 15px;
+  box-shadow: none;
+  border-radius: 0;
+  color: var(--default-color);
+  background-color: var(--surface-color);
+  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+}
+
+.contact .signup-form input[type=text]:focus,
+.contact .signup-form input[type=email]:focus,
+.contact .signup-form input[type=tel]:focus,
+.contact .signup-form input[type=password]:focus {
+  border-color: var(--accent-color);
+  outline: none;
+}
+
+.contact .signup-form input[type=text]::placeholder,
+.contact .signup-form input[type=email]::placeholder,
+.contact .signup-form input[type=tel]::placeholder,
+.contact .signup-form input[type=password]::placeholder {
+  color: color-mix(in srgb, var(--default-color), transparent 70%);
+}
+
+/* Submit Button */
+.contact .signup-form button[type=submit] {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  border: 0;
+  padding: 10px 30px;
+  transition: 0.4s;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.contact .signup-form button[type=submit]:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+}
+
+/* Sign In Link */
+.contact .signup-form p {
+  margin-top: 20px;
+  margin-bottom: 0;
+  color: var(--default-color);
+  font-size: 14px;
+}
+
+.contact .signup-form p a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.contact .signup-form p a:hover {
+  color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  text-decoration: underline;
+}
+
+/* Alert Styling */
+.contact .signup-form .alert {
+  margin-bottom: 20px;
+  padding: 15px 20px;
+  border-radius: 4px;
+  border-left: 4px solid;
+}
+
+.contact .signup-form .alert-warning {
+  background-color: #fff3cd;
+  border-color: #ffc107;
+  color: #856404;
+}
+
+.contact .signup-form .alert .btn-close {
+  padding: 0.5rem 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact .signup-form {
+    padding: 25px;
+  }
+  
+  .contact .signup-form button[type=submit] {
+    width: 100%;
+    padding: 12px 30px;
+  }
+}
+
